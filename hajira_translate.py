@@ -107,7 +107,7 @@ if user_input:
     
     result = chain.run(input_documents=docs, question=query)
     
-   if translate_option and selected_language and result:
+   if translate_option and selected_language:
           translated_result = translate_text(result, languages[selected_language])
           st.write("Translated Answer:")
           st.write(translated_result)
