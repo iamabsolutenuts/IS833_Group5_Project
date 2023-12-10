@@ -82,6 +82,7 @@ translate_option = st.checkbox("Translate Answer")
 
 
 if user_input:
+
     # Your existing backend code
     query = user_input  # Assuming the user input is the query
     
@@ -107,10 +108,10 @@ if user_input:
     
     result = chain.run(input_documents=docs, question=query)
     
-   if translate_option and selected_language:
-          translated_result = translate_text(result, languages[selected_language])
-          st.write("Translated Answer:")
-          st.write(translated_result)
+    if translate_option and selected_language:
+        translated_result = translate_text(result, languages[selected_language])
+        st.write("Translated Answer:")
+        st.write(translated_result)
     else:
         # Display the original result
         st.write(result)
